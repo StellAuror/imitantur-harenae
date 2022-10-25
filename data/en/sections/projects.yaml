@@ -1,0 +1,29 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: Professional
+  filter: "Professional"
+- name: Academic
+  filter: "Academic"
+- name: Hobby
+  filter: "Hobby"
+
+# your projects
+projects:
+- name: Training Tracker
+  logo: /images/sections/projects/gym.png
+  role: Owner
+  timeline: "May 2020"
+  #repo: 
+  url: "https://mintdata.shinyapps.io/WebAppTest/"  
+  summary: Training progress tracking app - basic statistics
+  tags: ["Hobby", "Gym", "1st Attempt"]
