@@ -1,0 +1,706 @@
+---
+title: "Machine Learning Fundamentals"
+date: 2021-06-08
+#hero: /images/posts/writing-posts/analytics.svg
+description: Basic statistics and measures for machine learning algorithms 
+theme: Toha
+mermaid: true
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+
+
+<div id="intro" class="section level2">
+<h2>Intro</h2>
+<div id="biblioteki" class="section level3">
+<h3>Biblioteki</h3>
+<pre class="r"><code>library(&quot;tidyverse&quot;)
+library(&quot;plotly&quot;)
+library(&quot;gapminder&quot;)
+library(&quot;broom&quot;)
+library(&quot;ggfortify&quot;)</code></pre>
+</div>
+<div id="model-liniowy-lm" class="section level3">
+<h3>Model liniowy <code>lm()</code></h3>
+<pre class="r"><code># Wszystkie zmienne
+model &lt;- 
+  filter(gapminder, country == &quot;Poland&quot;)[, -(1:2)] %&gt;%
+    lm(formula = pop ~ ., data = .)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"33507b97699d":["function () ","plotlyVisDat"]},"cur_data":"33507b97699d","attrs":{"33507b97699d":{"x":{},"y":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"markers","name":"Dane historyczne","inherit":true},"33507b97699d.1":{"x":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],"y":[25858927.4523298,28981483.4086363,30797387.7080527,32222831.2747248,33092605.0641653,33168408.6173912,35535243.8696591,36155247.0589649,38388602.3338325,38833221.4667835,39780842.6950132,39064852.0504468],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"lines","color":"red","name":"Model","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"year"},"yaxis":{"domain":[0,1],"automargin":true,"title":"pop"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],"y":[25730551,28235346,30329617,31785378,33039545,34621254,36227381,37740710,38370697,38654957,38625976,38518241],"type":"scatter","mode":"markers","name":"Dane historyczne","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],"y":[25858927.4523298,28981483.4086363,30797387.7080527,32222831.2747248,33092605.0641653,33168408.6173912,35535243.8696591,36155247.0589649,38388602.3338325,38833221.4667835,39780842.6950132,39064852.0504468],"type":"scatter","mode":"lines","name":"Model","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"line":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<ul>
+<li><p>Model liniowy</p></li>
+<li><p>Dotyczy tylko zmiennych numerycznych</p></li>
+<li><p>funkcja <strong>I()</strong> pozwala na modyfikację zmiennych (np. potęga) w celu modyfikacji charakterystyki rozkładu zmiennej do modelu liniowego</p>
+<ul>
+<li>np. jeżeli wykres rozrzutu ma wzór paraboli, zmienną objaśnianą należy podnieść do potęgi <span class="math inline">\(^{\frac{1}{2}}\)</span></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="funkcje-tekstowe" class="section level2">
+<h2>Funkcje tekstowe</h2>
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+<pre class="r"><code>summary(model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = pop ~ ., data = .)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1154867  -487481  -153320   159605  1585463 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -4.946e+08  8.689e+07  -5.692 0.000459 ***
+## year         2.514e+05  4.797e+04   5.241 0.000782 ***
+## lifeExp      5.325e+05  2.085e+05   2.554 0.033937 *  
+## gdpPercap   -7.228e+02  2.501e+02  -2.890 0.020202 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 984500 on 8 degrees of freedom
+## Multiple R-squared:  0.965,  Adjusted R-squared:  0.9519 
+## F-statistic: 73.54 on 3 and 8 DF,  p-value: 3.639e-06</code></pre>
+</div>
+<div id="augment" class="section level3">
+<h3>Augment</h3>
+<pre class="r"><code>augment(model)</code></pre>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="5%" />
+<col width="8%" />
+<col width="10%" />
+<col width="9%" />
+<col width="12%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">pop</th>
+<th align="right">year</th>
+<th align="right">lifeExp</th>
+<th align="right">gdpPercap</th>
+<th align="right">.fitted</th>
+<th align="right">.resid</th>
+<th align="right">.hat</th>
+<th align="right">.sigma</th>
+<th align="right">.cooksd</th>
+<th align="right">.std.resid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">25730551</td>
+<td align="right">1952</td>
+<td align="right">61.310</td>
+<td align="right">4029.330</td>
+<td align="right">25858927</td>
+<td align="right">-128376.45</td>
+<td align="right">0.8467704</td>
+<td align="right">1045175.5</td>
+<td align="right">0.1532987</td>
+<td align="right">-0.3331101</td>
+</tr>
+<tr class="even">
+<td align="right">28235346</td>
+<td align="right">1957</td>
+<td align="right">65.770</td>
+<td align="right">4734.253</td>
+<td align="right">28981483</td>
+<td align="right">-746137.41</td>
+<td align="right">0.2250076</td>
+<td align="right">1002563.9</td>
+<td align="right">0.0537932</td>
+<td align="right">-0.8608824</td>
+</tr>
+<tr class="odd">
+<td align="right">30329617</td>
+<td align="right">1962</td>
+<td align="right">67.640</td>
+<td align="right">5338.752</td>
+<td align="right">30797388</td>
+<td align="right">-467770.71</td>
+<td align="right">0.2175309</td>
+<td align="right">1033348.1</td>
+<td align="right">0.0200512</td>
+<td align="right">-0.5371223</td>
+</tr>
+<tr class="even">
+<td align="right">31785378</td>
+<td align="right">1967</td>
+<td align="right">69.610</td>
+<td align="right">6557.153</td>
+<td align="right">32222831</td>
+<td align="right">-437453.27</td>
+<td align="right">0.2749123</td>
+<td align="right">1034434.1</td>
+<td align="right">0.0258086</td>
+<td align="right">-0.5218073</td>
+</tr>
+<tr class="odd">
+<td align="right">33039545</td>
+<td align="right">1972</td>
+<td align="right">70.850</td>
+<td align="right">8006.507</td>
+<td align="right">33092605</td>
+<td align="right">-53060.06</td>
+<td align="right">0.2748875</td>
+<td align="right">1052236.7</td>
+<td align="right">0.0003796</td>
+<td align="right">-0.0632905</td>
+</tr>
+<tr class="even">
+<td align="right">34621254</td>
+<td align="right">1977</td>
+<td align="right">70.670</td>
+<td align="right">9508.141</td>
+<td align="right">33168409</td>
+<td align="right">1452845.38</td>
+<td align="right">0.2115225</td>
+<td align="right">851661.4</td>
+<td align="right">0.1852270</td>
+<td align="right">1.6618756</td>
+</tr>
+<tr class="odd">
+<td align="right">36227381</td>
+<td align="right">1982</td>
+<td align="right">71.320</td>
+<td align="right">8451.531</td>
+<td align="right">35535244</td>
+<td align="right">692137.13</td>
+<td align="right">0.1231876</td>
+<td align="right">1014744.1</td>
+<td align="right">0.0197982</td>
+<td align="right">0.7507798</td>
+</tr>
+<tr class="even">
+<td align="right">37740710</td>
+<td align="right">1987</td>
+<td align="right">70.980</td>
+<td align="right">9082.351</td>
+<td align="right">36155247</td>
+<td align="right">1585462.94</td>
+<td align="right">0.1233248</td>
+<td align="right">835549.0</td>
+<td align="right">0.1040334</td>
+<td align="right">1.7199289</td>
+</tr>
+<tr class="odd">
+<td align="right">38370697</td>
+<td align="right">1992</td>
+<td align="right">70.990</td>
+<td align="right">7738.881</td>
+<td align="right">38388602</td>
+<td align="right">-17905.33</td>
+<td align="right">0.5347864</td>
+<td align="right">1052453.5</td>
+<td align="right">0.0002043</td>
+<td align="right">-0.0266643</td>
+</tr>
+<tr class="even">
+<td align="right">38654957</td>
+<td align="right">1997</td>
+<td align="right">72.750</td>
+<td align="right">10159.584</td>
+<td align="right">38833221</td>
+<td align="right">-178264.47</td>
+<td align="right">0.2405202</td>
+<td align="right">1049656.8</td>
+<td align="right">0.0034177</td>
+<td align="right">-0.2077688</td>
+</tr>
+<tr class="odd">
+<td align="right">38625976</td>
+<td align="right">2002</td>
+<td align="right">74.670</td>
+<td align="right">12002.239</td>
+<td align="right">39780843</td>
+<td align="right">-1154866.70</td>
+<td align="right">0.2257350</td>
+<td align="right">928265.6</td>
+<td align="right">0.1295301</td>
+<td align="right">-1.3330941</td>
+</tr>
+<tr class="even">
+<td align="right">38518241</td>
+<td align="right">2007</td>
+<td align="right">75.563</td>
+<td align="right">15389.925</td>
+<td align="right">39064852</td>
+<td align="right">-546611.05</td>
+<td align="right">0.7018149</td>
+<td align="right">982147.1</td>
+<td align="right">0.6082680</td>
+<td align="right">-1.0167383</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="glance" class="section level3">
+<h3>Glance</h3>
+<pre class="r"><code>glance(model)</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="8%" />
+<col width="12%" />
+<col width="8%" />
+<col width="8%" />
+<col width="7%" />
+<col width="2%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="11%" />
+<col width="10%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">r.squared</th>
+<th align="right">adj.r.squared</th>
+<th align="right">sigma</th>
+<th align="right">statistic</th>
+<th align="right">p.value</th>
+<th align="right">df</th>
+<th align="right">logLik</th>
+<th align="right">AIC</th>
+<th align="right">BIC</th>
+<th align="right">deviance</th>
+<th align="right">df.residual</th>
+<th align="right">nobs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.9650054</td>
+<td align="right">0.9518824</td>
+<td align="right">984523.8</td>
+<td align="right">73.53549</td>
+<td align="right">3.6e-06</td>
+<td align="right">3</td>
+<td align="right">-180.1934</td>
+<td align="right">370.3869</td>
+<td align="right">372.8114</td>
+<td align="right">7.754298e+12</td>
+<td align="right">8</td>
+<td align="right">12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="funkcje-graficzne" class="section level2">
+<h2>Funkcje graficzne</h2>
+<div id="residuals-vs.-fitted" class="section level3">
+<h3>Residuals vs. Fitted</h3>
+<pre class="r"><code>autoplot(
+    model,
+    which = 1, nrow = 1, ncol = 1
+)</code></pre>
+<p><img src="/posts/Machine Learning/Learning/basics/ML_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<ul>
+<li><p>Pytanie: <strong>Jaki jest trend poprawności modelu</strong></p></li>
+<li><p>Im residuals bliższe są 0, tym lepszy model</p></li>
+<li><p>Pokazuje czy poszczególne przedziały modelu charakteryzują się różnymi trendami</p></li>
+</ul>
+</div>
+<div id="qq-plot" class="section level3">
+<h3>QQ Plot</h3>
+<pre class="r"><code>autoplot(
+    model,
+    which = 2, nrow = 1, ncol = 1
+)</code></pre>
+<p><img src="/posts/Machine Learning/Learning/basics/ML_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<ul>
+<li><p>Pytanie: <strong>Czy model załamuje się w specyficznych miejscach?</strong></p></li>
+<li><p>Oś y - zestandaryzowane wartości reszt (residuals)</p></li>
+<li><p>Oś x - kwantyle zmiennej objaśniącej</p></li>
+</ul>
+</div>
+<div id="scale---location" class="section level3">
+<h3>Scale - location</h3>
+<pre class="r"><code>autoplot(
+    model,
+    which = 3, nrow = 1, ncol = 1
+)</code></pre>
+<p><img src="/posts/Machine Learning/Learning/basics/ML_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<ul>
+<li><p>Pytanie: <strong>Czy trend poprawności modelu rośnie, czy też spada?</strong></p></li>
+<li><p>Podobny do <em>resudials vs. fitted values</em>, ale w tym wypadku <em>residuals</em> są pierwiastkiem ze zestandaryzowanych wartości</p></li>
+</ul>
+</div>
+</div>
+<div id="statystyki" class="section level2">
+<h2>Statystyki</h2>
+<div id="coefficients" class="section level3">
+<h3>Coefficients</h3>
+<pre class="r"><code>coefficients(model)</code></pre>
+<pre><code>##   (Intercept)          year       lifeExp     gdpPercap 
+## -4.946116e+08  2.514005e+05  5.325235e+05 -7.227757e+02</code></pre>
+<ul>
+<li><p><strong>Współczynniki funkcji liniowej</strong></p>
+<ul>
+<li><p>Pierwsza wartość - wyraz wolny <em>intercept</em></p></li>
+<li><p>Druga wartość - współczynnik kierunkowy <em>slope</em></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="fitted-values" class="section level3">
+<h3>Fitted values</h3>
+<pre class="r"><code>fitted(model)</code></pre>
+<pre><code>##        1        2        3        4        5        6        7        8 
+## 25858927 28981483 30797388 32222831 33092605 33168409 35535244 36155247 
+##        9       10       11       12 
+## 38388602 38833221 39780843 39064852</code></pre>
+<pre><code>##     1952     1957     1962     1967     1972     1977     1982     1987 
+## 25858927 28981483 30797388 32222831 33092605 33168409 35535244 36155247 
+##     1992     1997     2002     2007 
+## 38388602 38833221 39780843 39064852</code></pre>
+<ul>
+<li><p>Odpowiada na pytanie: <strong>Jakie wartości predykuje model?</strong></p></li>
+<li><p>Wektor wartości estymowanych wg podanego modelu</p></li>
+</ul>
+</div>
+<div id="residuals" class="section level3">
+<h3>Residuals</h3>
+<pre class="r"><code>residuals(model)</code></pre>
+<pre><code>##           1           2           3           4           5           6 
+##  -128376.45  -746137.41  -467770.71  -437453.27   -53060.06  1452845.38 
+##           7           8           9          10          11          12 
+##   692137.13  1585462.94   -17905.33  -178264.47 -1154866.70  -546611.05</code></pre>
+<ul>
+<li><p>Wektor błędu estymacji</p>
+<ul>
+<li>Formuła: <span class="math inline">\(wartość - estymacja\)</span></li>
+</ul></li>
+<li><p>Pytanie: <strong>Jak bardzo estymacje różnią się od faktycznych wartości?</strong></p></li>
+</ul>
+</div>
+<div id="r-squared" class="section level3">
+<h3>R-squared</h3>
+<pre class="r"><code>glance(model) %&gt;% pull(r.squared)</code></pre>
+<pre><code>## [1] 0.9650054</code></pre>
+<ul>
+<li><p>Odpowiada na pytanie: <strong>Jak dobry jest model?</strong></p></li>
+<li><p>Jest to wartość korelacji podniesiona do kwadratu, więc:</p>
+<ul>
+<li><p>1 - perfekcyjne dopasowanie</p></li>
+<li><p>0 - fatalne dopasowanie</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="sigma-rse-rsme" class="section level3">
+<h3>Sigma / RSE / RSME</h3>
+<pre class="r"><code>glance(model) %&gt;% pull(sigma) #RSE</code></pre>
+<pre><code>## [1] 984523.8</code></pre>
+<ul>
+<li><p>Pytanie: <strong>Jaki jest przeciętny błąd modelu (między obserwacją, a predykcją)?</strong></p></li>
+<li><p>Wzór$ RSE = {freedom Degree} ^ {1/2}$</p>
+<ul>
+<li><p>Freedom degree - liczba obserwacji - liczba współczynników</p></li>
+<li><p>Przy obliczaniu RMSE należy pominąć liczbę współczynników <em>(number of coefficients)</em></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="leverage-hat-values" class="section level3">
+<h3>Leverage / Hat values</h3>
+<pre class="r"><code>hatvalues(model)</code></pre>
+<pre><code>##         1         2         3         4         5         6         7         8 
+## 0.8467704 0.2250076 0.2175309 0.2749123 0.2748875 0.2115225 0.1231876 0.1233248 
+##         9        10        11        12 
+## 0.5347864 0.2405202 0.2257350 0.7018149</code></pre>
+<ul>
+<li><p>Pytanie: <strong>Jak bardzo skrajne są poszczególne estymacje</strong></p></li>
+<li><p>Im niższa wartość, tym bardziej skrajna estymacja</p></li>
+</ul>
+</div>
+<div id="influence-cooks-distance" class="section level3">
+<h3>Influence (Cook’s distance)</h3>
+<pre class="r"><code>model %&gt;%
+  augment %&gt;%
+  select(.cooksd)</code></pre>
+<pre><code>## # A tibble: 12 × 1
+##     .cooksd
+##       &lt;dbl&gt;
+##  1 0.153   
+##  2 0.0538  
+##  3 0.0201  
+##  4 0.0258  
+##  5 0.000380
+##  6 0.185   
+##  7 0.0198  
+##  8 0.104   
+##  9 0.000204
+## 10 0.00342 
+## 11 0.130   
+## 12 0.608</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">.cooksd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.1532987</td>
+</tr>
+<tr class="even">
+<td align="right">0.0537932</td>
+</tr>
+<tr class="odd">
+<td align="right">0.0200512</td>
+</tr>
+<tr class="even">
+<td align="right">0.0258086</td>
+</tr>
+<tr class="odd">
+<td align="right">0.0003796</td>
+</tr>
+<tr class="even">
+<td align="right">0.1852270</td>
+</tr>
+<tr class="odd">
+<td align="right">0.0197982</td>
+</tr>
+<tr class="even">
+<td align="right">0.1040334</td>
+</tr>
+<tr class="odd">
+<td align="right">0.0002043</td>
+</tr>
+<tr class="even">
+<td align="right">0.0034177</td>
+</tr>
+<tr class="odd">
+<td align="right">0.1295301</td>
+</tr>
+<tr class="even">
+<td align="right">0.6082680</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Pytanie: <strong><em>Jak bardzo model zmieniłbym się, jeżeli poszczególne obserwacje zostałyby pominięte, tudzież jaki wpływ ma obserwacja na model</em></strong></p></li>
+<li><p>Im wyższa wartość, tym bardziej skrajna obserwacja</p></li>
+</ul>
+</div>
+</div>
+<div id="tidyverse-overview" class="section level1">
+<h1>Tidyverse overview</h1>
+<div id="wstęp" class="section level2">
+<h2>Wstęp</h2>
+<div id="biblioteki-1" class="section level3">
+<h3>Biblioteki</h3>
+<pre class="r"><code>library(&quot;tidyverse&quot;)
+library(&quot;plotly&quot;)
+library(&quot;gapminder&quot;)</code></pre>
+</div>
+<div id="zbiór-danych-gapminder" class="section level3">
+<h3>Zbiór danych <code>gapminder</code></h3>
+<pre class="r"><code>kable(head(gapminder),
+      col.names = names(gapminder),
+      align = &quot;cc&quot;,
+      caption = &quot;Pierwsze 6 rekordów zbioru&quot;)</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-22">Table 1: </span>Pierwsze 6 rekordów zbioru</caption>
+<thead>
+<tr class="header">
+<th align="center">country</th>
+<th align="center">continent</th>
+<th align="center">year</th>
+<th align="center">lifeExp</th>
+<th align="center">pop</th>
+<th align="center">gdpPercap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Afghanistan</td>
+<td align="center">Asia</td>
+<td align="center">1952</td>
+<td align="center">28.801</td>
+<td align="center">8425333</td>
+<td align="center">779.4453</td>
+</tr>
+<tr class="even">
+<td align="center">Afghanistan</td>
+<td align="center">Asia</td>
+<td align="center">1957</td>
+<td align="center">30.332</td>
+<td align="center">9240934</td>
+<td align="center">820.8530</td>
+</tr>
+<tr class="odd">
+<td align="center">Afghanistan</td>
+<td align="center">Asia</td>
+<td align="center">1962</td>
+<td align="center">31.997</td>
+<td align="center">10267083</td>
+<td align="center">853.1007</td>
+</tr>
+<tr class="even">
+<td align="center">Afghanistan</td>
+<td align="center">Asia</td>
+<td align="center">1967</td>
+<td align="center">34.020</td>
+<td align="center">11537966</td>
+<td align="center">836.1971</td>
+</tr>
+<tr class="odd">
+<td align="center">Afghanistan</td>
+<td align="center">Asia</td>
+<td align="center">1972</td>
+<td align="center">36.088</td>
+<td align="center">13079460</td>
+<td align="center">739.9811</td>
+</tr>
+<tr class="even">
+<td align="center">Afghanistan</td>
+<td align="center">Asia</td>
+<td align="center">1977</td>
+<td align="center">38.438</td>
+<td align="center">14880372</td>
+<td align="center">786.1134</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="funkcje-nest-oraz-unnest" class="section level2">
+<h2>Funkcje <code>nest()</code> oraz <code>unnest()</code></h2>
+<pre class="r"><code>gapminder %&gt;% 
+  group_by(country) %&gt;% 
+  nest()
+
+# dfN %&gt;% unnest()</code></pre>
+<table>
+<colgroup>
+<col width="1%" />
+<col width="98%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">country</th>
+<th align="center">data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Afghanistan</td>
+<td align="center">3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 3.000000e+00, 1.952000e+03, 1.957000e+03, 1.962000e+03, 1.967000e+03, 1.972000e+03, 1.977000e+03, 1.982000e+03, 1.987000e+03, 1.992000e+03, 1.997000e+03, 2.002000e+03, 2.007000e+03, 2.880100e+01, 3.033200e+01, 3.199700e+01, 3.402000e+01, 3.608800e+01, 3.843800e+01, 3.985400e+01, 4.082200e+01, 4.167400e+01, 4.176300e+01, 4.212900e+01, 4.382800e+01, 8.425333e+06, 9.240934e+06, 1.026708e+07, 1.153797e+07, 1.307946e+07, 1.488037e+07, 1.288182e+07, 1.386796e+07, 1.631792e+07, 2.222742e+07, 2.526841e+07, 3.188992e+07, 7.794453e+02, 8.208530e+02, 8.531007e+02, 8.361971e+02, 7.399811e+02, 7.861134e+02, 9.780114e+02, 8.523959e+02, 6.493414e+02, 6.353414e+02, 7.267341e+02, 9.745803e+02</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="center">continent</th>
+<th align="center">year</th>
+<th align="center">lifeExp</th>
+<th align="center">pop</th>
+<th align="center">gdpPercap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Asia</td>
+<td align="center">1952</td>
+<td align="center">28.801</td>
+<td align="center">8425333</td>
+<td align="center">779.4453</td>
+</tr>
+<tr class="even">
+<td align="center">Asia</td>
+<td align="center">1957</td>
+<td align="center">30.332</td>
+<td align="center">9240934</td>
+<td align="center">820.8530</td>
+</tr>
+<tr class="odd">
+<td align="center">Asia</td>
+<td align="center">1962</td>
+<td align="center">31.997</td>
+<td align="center">10267083</td>
+<td align="center">853.1007</td>
+</tr>
+<tr class="even">
+<td align="center">Asia</td>
+<td align="center">1967</td>
+<td align="center">34.020</td>
+<td align="center">11537966</td>
+<td align="center">836.1971</td>
+</tr>
+<tr class="odd">
+<td align="center">Asia</td>
+<td align="center">1972</td>
+<td align="center">36.088</td>
+<td align="center">13079460</td>
+<td align="center">739.9811</td>
+</tr>
+<tr class="even">
+<td align="center">Asia</td>
+<td align="center">1977</td>
+<td align="center">38.438</td>
+<td align="center">14880372</td>
+<td align="center">786.1134</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="mapowanie-map" class="section level2">
+<h2>Mapowanie <code>map()</code></h2>
+<div id="z-funkcją-mutate" class="section level3">
+<h3>Z funkcją <code>mutate()</code></h3>
+<p><code>map()</code> przyjmuje parametr <code>data</code>, który jest kolumną (tibble) struktury danych <code>dfN</code></p>
+<p>Jeżeli outputem jest jedna zmienna (tj. wektor o długości 1), to można uprościć jej wyświetlanie za pomocą rodziny funkcji <code>map_*()</code></p>
+<pre class="r"><code>  dfN %&gt;%
+  mutate(mean_pop = map(data, ~mean(.x$pop)))</code></pre>
+<pre><code>## # A tibble: 142 × 3
+## # Groups:   country [142]
+##    country     data              mean_pop 
+##    &lt;fct&gt;       &lt;list&gt;            &lt;list&gt;   
+##  1 Afghanistan &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  2 Albania     &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  3 Algeria     &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  4 Angola      &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  5 Argentina   &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  6 Australia   &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  7 Austria     &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  8 Bahrain     &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+##  9 Bangladesh  &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+## 10 Belgium     &lt;tibble [12 × 5]&gt; &lt;dbl [1]&gt;
+## # … with 132 more rows
+## # ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre class="r"><code>  output &lt;-
+    dfN %&gt;%
+    mutate(mean_pop = map_dbl(data, ~mean(.x$pop)))</code></pre>
+</div>
+<div id="z-modelem-liniowym-lm" class="section level3">
+<h3>Z modelem liniowym <code>lm()</code></h3>
+<pre class="r"><code>dfNm &lt;- 
+  dfN %&gt;%
+  mutate(model = map(data, ~lm(formula = pop ~ ., data = .x[, 2:4])))
+
+output &lt;- 
+  dfNm %&gt;% 
+    mutate(perc_bias = map2_dbl(data, model, ~mean(.y$residuals / .x$pop)))</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;continent&#39;, &#39;country&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"data":[{"x":[0.00310550222635008,0.000472083364845871,0.00125028184081278,-0.00441432588673882,0.000519263500479625,0.00241949783764812,-0.00040897346129581,0.000355736330606442,0.000308706094337087,0.00306339896065785,0.00466927614012932,0.00188304192237911,0.00248356179793097,0.00720105433240503,0.0026264458040391,-0.0215995701477332,0.00145943590912451,0.00303013161253387,-0.00281697188313017,0.0187772241724244,0.00377960436098621,0.00066110119597243,-0.00209216246519904,0.00336430804772707,0.000642986108850176,0.00530593366674335,0.0154227693864654,0.00445349404641855,0.00547832625582718,0.000807107574959008,-0.000419383249183543,-0.000787867382829814,0.0036666978546829,-0.00104733801688656,0.00118168576817769,0.000471444791831192,0.000760463601989603,-0.00129938259214008,0.0021161522642372,0.000402435071431184,0.0097310343050754,0.000696285517723037,-0.000165105207713366,0.00223601275145291,0.0128117839740095,0.00231438060307399,0.00446784884829253,0.000779163354245434,0.00163409219789217,0.00737214311307062,0.00214493628114246,0.00204412656969383],"y":["Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cameroon","Central African Republic","Chad","Comoros","Congo, Dem. Rep.","Congo, Rep.","Cote d'Ivoire","Djibouti","Egypt","Equatorial Guinea","Eritrea","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Reunion","Rwanda","Sao Tome and Principe","Senegal","Sierra Leone","Somalia","South Africa","Sudan","Swaziland","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"],"name":"Africa","type":"bar","orientation":"h","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[0.000558934695613637,0.00287299756994505,0.000259625766598125,-0.000668575982229674,0.000534231188781057,0.000217020596223374,0.00121230576603423,-0.000280107605745518,0.000218354991257171,0.00446200426464779,0.000577251477595663,0.00425006524923709,0.000200248870300786,0.00367010084116565,-0.00033963031515675,0.000398216908486656,0.00851650789711843,6.06764815845074e-05,0.00551248197554904,0.0022075514327194,-0.000789396966011641,-0.000689099973568499,4.80098005473712e-05,-0.000414310471229361,0.0002637868922591],"y":["Argentina","Bolivia","Brazil","Canada","Chile","Colombia","Costa Rica","Cuba","Dominican Republic","Ecuador","El Salvador","Guatemala","Haiti","Honduras","Jamaica","Mexico","Nicaragua","Panama","Paraguay","Peru","Puerto Rico","Trinidad and Tobago","United States","Uruguay","Venezuela"],"name":"Americas","type":"bar","orientation":"h","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x2","yaxis":"y2","frame":null},{"x":[-0.00694448158513989,0.00325778513724915,0.000573414015932273,-0.00267327913736775,-0.000202788549011866,-0.000224797377213014,0.000168073843705395,0.00152700643703565,0.00546563518039778,0.00329600996441641,0.00313916337563941,-0.000193335523606617,0.0221269740647351,-6.64219511852214e-05,-0.00105611022454202,0.014089537222023,-0.00383582376485266,5.59855920378205e-05,-0.000335115452664655,-0.00026817334399087,0.00173939874448648,0.00943400886644901,0.00378019444764537,0.00307776172355697,0.00138319398144465,0.00186165501782634,-0.000472999775772687,0.00781713640281022,-0.000917756539989165,-8.39536555923915e-06,0.00121125745661434,-0.00804012873833933,0.00669322679087703],"y":["Afghanistan","Bahrain","Bangladesh","Cambodia","China","Hong Kong, China","India","Indonesia","Iran","Iraq","Israel","Japan","Jordan","Korea, Dem. Rep.","Korea, Rep.","Kuwait","Lebanon","Malaysia","Mongolia","Myanmar","Nepal","Oman","Pakistan","Philippines","Saudi Arabia","Singapore","Sri Lanka","Syria","Taiwan","Thailand","Vietnam","West Bank and Gaza","Yemen, Rep."],"name":"Asia","type":"bar","orientation":"h","marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y3","frame":null},{"x":[-0.00299461873433715,-0.00012064316650713,-9.39684052803501e-05,-0.00275642188943591,-0.00326101816308481,-0.000217733603175569,-0.000276057963540142,-0.000330811119015226,-0.000200994355879171,-0.000335657540316108,-0.000281987170701892,-7.78043298069302e-05,-0.000906731154569464,-0.000288985973708789,-0.000838690238039102,-0.000225066166876635,-0.00102445139234915,-0.000358330132499153,-0.000126846312269445,-0.00140042010380734,-0.000205071250209925,-0.0012999135122819,-0.000409937415280983,-0.00136975478088827,-0.000243453942640178,-0.00029203418778268,-0.000126217828317519,-0.00110282046543748,0.000468719473837227,-7.62245443853259e-05],"y":["Albania","Austria","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Czech Republic","Denmark","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Montenegro","Netherlands","Norway","Poland","Portugal","Romania","Serbia","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Turkey","United Kingdom"],"name":"Europe","type":"bar","orientation":"h","marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"xaxis":"x2","yaxis":"y4","frame":null},{"x":[-6.04026268489201e-05,-0.000836253226207663],"y":["Australia","New Zealand"],"name":"Oceania","type":"bar","orientation":"h","marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"xaxis":"x","yaxis":"y5","frame":null}],"layout":{"xaxis":{"domain":[0,0.48],"automargin":true,"title":"","anchor":"y5"},"xaxis2":{"domain":[0.52,1],"automargin":true,"title":"","anchor":"y4"},"yaxis5":{"domain":[0,0.313333333333333],"automargin":true,"tickvals":[null],"anchor":"x"},"yaxis4":{"domain":[0.353333333333333,0.646666666666667],"automargin":true,"tickvals":[null],"anchor":"x2"},"yaxis3":{"domain":[0.353333333333333,0.646666666666667],"automargin":true,"tickvals":[null],"anchor":"x"},"yaxis2":{"domain":[0.686666666666667,1],"automargin":true,"tickvals":[null],"anchor":"x2"},"yaxis":{"domain":[0.686666666666667,1],"automargin":true,"tickvals":[null],"anchor":"x"},"annotations":[],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true},"attrs":{"33504ebd565":{"x":{},"y":{},"name":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"335037f2336b":{"x":{},"y":{},"name":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"33507a09749d":{"x":{},"y":{},"name":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"33504a7928ee":{"x":{},"y":{},"name":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"335021ac5817":{"x":{},"y":{},"name":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
