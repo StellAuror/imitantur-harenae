@@ -1,0 +1,46 @@
+# Main Section
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+
+
+# Skills section
+skills:
+- name: R, RStudio, RSConnect, RPubs
+  logo: /images/sections/skills/R.png
+  summary: "Extensive knowledge of programming and data science in R. From simple .html reports to interactive management tables and advanced dashboards. Besides data manipulation, also familiar with the basics of Machine Learning and Big Data"
+  #url: ""
+
+
+- name: Git
+  logo: /images/sections/skills/git.png
+  summary: "Experienced with git-based version control development. Also works with github repos."
+  url: "https://github.com/StellAuror"
+  
+- name: SQL
+  logo: /images/sections/skills/sql.png
+  summary: "Intermediate knowledge of SQL queries, familiar with Access software, management of relational databases and data warehouses"
+  #url: ""
+
+- name: HTML & CSS
+  logo: /images/sections/skills/html.png
+  summary: "Working knowledge of HTML and CSS"
+  #url: ""
+  
+- name: Office365
+  logo: /images/sections/skills/office365.png
+  summary: "Advanced knowledge of MS Office 365, including Excel, Access, PowerPoint, Word with VBA programming. In addition, proficiency in using Outlook and SharePoint. Familiar with designing and managing MS Teams channels."
+  #url: ""
+  
+- name: VBA
+  logo: /images/sections/skills/vba.png
+  summary: "Experience in the automation of reporting and data presentation processes using VBA macros"
+  #url: ""
+  
+- name: SAP, AWS, Netlify
+  logo: /images/sections/skills/sap.png
+  summary: "Fundamental knowledge of SAP, AWS and Netlify technologies"
+  #url: ""  
