@@ -9,9 +9,8 @@ section:
   # hideTitle: true 
 
 # Your experiences
-
-
-
+# Your experiences
+experiences:
 - company:
     name: Amazon Fulfillment Center
     url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
@@ -41,13 +40,12 @@ section:
     - Storage of products in a warehouse
     - ensuring customer satisfaction
     
-    experiences:
+    
 - company:
     name: Novartis affiliate
     url: "http://lek-strykow.polandtrade.pl"
-    location: Remote
-    # company overview
-    overview: 
+    location: Remote, Warszawa
+    overview: Intern in an international supply chain management team in one of the largest pharmaceutical corporations in the world.
   positions:
   - designation: Intern
     start: Jul 2022
@@ -56,6 +54,6 @@ section:
     # give some points about what was your responsibilities at the company.
     responsibilities:
     - Designing and developing visualization tools
-    - `As is` process mapping
+    - As is process mapping
     - Database management and integrity assurance
     - Reporting and supporting data driven decision making
