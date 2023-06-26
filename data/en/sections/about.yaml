@@ -1,0 +1,98 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Data Analyst
+
+# a summary about you
+summary: 'In 2024, I will receive the title of management engineer, with a thesis dedicated to the implementation of a web application for real-time business data analysis using the R Shiny environment. However, as a hobby, I have begun to delve into the field of data science. I am fascinated by the world of data and its ability, combined with immense computational power, to provide us with insights about the world around us in ways previously impossible. I am amazed by the techniques of descriptive, predictive, and prescriptive analysis. I eagerly explore the latest advancements in AI and its potential, as well as the risks it carries. Data analysis brings together two aspects that greatly satisfy me: solving analytical problems and crafting stories from them. Whether its through web pages, reports, or storytelling presentations, I find joy in transforming analytical solutions into narratives. Except my proffessional path, I am a passionate enthusiast of philosophy, particularly fascinated by the philosophical traditions of the Far East. However, I also appreciate the great thinkers of Europe and America. This passion is closely tied to my love for fiction, as I find myself immersed in the novels of Dostoevsky, Ayn Rand, and Leo Tolstoy during my free time. In addition to escaping into the realm of fiction, I enjoy embarking on cycling expeditions, especially those that take me through forests and fields. Furthermore, in my leisure time, I take pleasure in listening to music and diving into the worlds of computer games.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "michalkrawczuk.gen@gmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/StellAuror"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "#"
+
+# You can put custom buttons to link your relevant resources.
+# For example, you can put link for your resume.
+resourceLinks:
+- title: "My Resume"
+  url: "files/resume.pdf"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name: Engineer
+  url: "https://wz.pwr.edu.pl"
+  badge: "https://upload.wikimedia.org/wikipedia/en/f/f4/Wroclaw_University_of_Technology_logo.jpg"
+
+- type: certification
+
+- type: certification
+  name: Data Analyst
+  url: "https://www.datacamp.com"
+  badge: "https://play-lh.googleusercontent.com/zIO-uuTBjFigUIswv_h9S0-wVIkno_obwannvzr7NrXbh_MXL_khqV7gEqBly6KXEi4"
+
+
+- type: soft-skill-indicator
+  name: R programming
+  percentage: 95
+  color: "#d9ed92"
+  
+- type: soft-skill-indicator
+  name: Data Visualization
+  percentage: 90
+  color: "#b5e48c"
+  
+- type: soft-skill-indicator
+  name: Predictive analyze
+  percentage: 75
+  color: "#99d98c"
+  
+- type: soft-skill-indicator
+  name: Business Objects Modeling
+  percentage: 75
+  color: "#76c893"
+  
+- type: soft-skill-indicator
+  name: Office365
+  percentage: 80
+  color: "#52b69a"
+
+- type: soft-skill-indicator
+  name: Analytical thinking
+  percentage: 90
+  color: "#168aad"
+
+- type: soft-skill-indicator
+  name: Communication skills
+  percentage: 80
+  color: "#1a759f"
+  
+- type: soft-skill-indicator
+  name: Attention to detail
+  percentage: 95
+  color: "#1e6091"
+  
+- type: soft-skill-indicator
+  name: Curiosity
+  percentage: 85
+  color: "#184e77"
+  

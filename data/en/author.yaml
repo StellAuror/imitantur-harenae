@@ -1,8 +1,8 @@
 # some information about you
 name: "Michał Krawczuk"
-nickname: "Confessor"
+nickname: "Michał"
 # greeting message before your name. it will default to "Hi! I am" if not provided
-greeting: "The Cargo Cult "
+greeting: "Hi! My name is "
 
 # give your some contact information. they will be used in the footer
 contactInfo:
@@ -15,5 +15,5 @@ contactInfo:
 
 # some summary about what you do
 summary:
-  - May all depths rise to my heights.
+  - May all depths rise to my heights!
   - ~Friedrich Nietzsche, Thus spoke Zarathustra

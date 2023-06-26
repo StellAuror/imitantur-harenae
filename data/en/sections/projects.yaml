@@ -19,18 +19,34 @@ buttons:
 
 #  my projects
 projects:
-- name: Training Tracker
+- name: Training tracker
   logo: /images/sections/projects/gym.png
-  role: Owner
+  role: Application
   timeline: "May 2022"
   url: "https://mintdata.shinyapps.io/WebAppTest/"  
-  summary: Training progress tracking app - basic statistics
+  summary: The Training Progress Tracking App is a comprehensive tool designed to assist individuals in monitoring and evaluating their progress during various training activities. It provides users with a range of basic statistics that offer valuable insights into their performance, allowing them to make informed decisions and adjustments to optimize their training routine. 
   tags: ["Hobby", "Gym", "1st Attempt"]
 
-- name: Banrkupt - data preparation
+- name: Bankruptcy prediction
   logo: /images/sections/projects/bankrupt-part1-pl.png
-  role: Owner
+  role: Project report
   timeline: "May 2023"
   url: "https://rpubs.com/StellAuror/Bakrupt-part1-pl"
-  tags: ["Exploratory", "Prediction", "Markdown"]
+  summary: In this academic project, I aimed to develop a bankruptcy prediction model using ML algorithms in RapidMiner & Python. The entire project covers data pereparation, feature selection & model development. This report is focsued at the first part (out of 3) - data preparation & understanding
+  tags: ["Academic", "Exploratory", "Prediction", "Markdown"]
+ 
+- name: Markdown repo
+  logo: /images/sections/projects/rrepo.png
+  role: Repository
+  timeline: "March 2022 - today"
+  url: "https://rpubs.com/StellAuror/Bakrupt-part1-pl"
+  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource for accessing well-organized and formatted notes and reports. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
+  tags: ["Academic", "Markdown", "Repository", "Hobby", "Professional"] 
   
+- name: Porfolio web page
+  logo: /images/sections/projects/cv.png
+  role: Resume
+  timeline: "December 2022 - today"
+  url: "https://imitantur-herenae.netlify.app"
+  summary: Welcome to my website! Here you will find information about me, my CV, and get to know my professional experience. I hope the information provided here gives you a comprehensive understanding of my background and professional journey. 
+  tags: ["Hobby", "Professional"] 
