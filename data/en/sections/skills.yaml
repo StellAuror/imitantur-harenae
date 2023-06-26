@@ -9,37 +9,68 @@ section:
 
 # Skills section
 skills:
-- name: R, RStudio, RSConnect, RPubs
+- name: R, RStudio, RPubs & Posit Toolchain
   logo: /images/sections/skills/R.png
   summary: "Extensive knowledge of programming and data science in R. From simple .html reports to interactive management tables and advanced dashboards. Besides data manipulation, also familiar with the basics of Machine Learning and Big Data"
   #url: ""
 
 - name: Git
   logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based version control development. Also works with github repos."
+  summary: "Experienced with git-based version control development. Also works with github repos"
   url: "https://github.com/StellAuror"
   
 - name: SQL
   logo: /images/sections/skills/sql.png
   summary: "Intermediate knowledge of SQL queries, familiar with Access software, management of relational databases and data warehouses"
   #url: ""
+  
+- name: Tableau & QlikSense
+  logo: /images/sections/skills/tableau.png
+  summary: "Adept at drag&drop data visualization tools. Mainly Tableau (Desktop) & QlikSense (SaaS), fundamental knowledge of PowerBI (Desktop)"
+  
+- name: RapidMiner & WEKA
+  logo: /images/sections/skills/rapid.png
+  summary: "Familiar with the basic operations of predictive analysis in the RapidMiner and WEKA (hope anyone heard of it) environments"
+
+- name: ARIS, Visio & Bonita
+  logo: /image/sections/skills/bonita.png
+  summary: "Experience in mapping and improving processes using BPMN models, also knowledge of event-based approaches. Fundamental knowledge of Bonita Applications"
 
 - name: HTML & CSS
   logo: /images/sections/skills/html.png
   summary: "Working knowledge of HTML and CSS. Mostly used to customize the appearance of management tables and dashboards in R. But also to customize this page :)"
   #url: ""
   
-- name: Office365
+- name: Office365 with VBA
   logo: /images/sections/skills/office365.png
-  summary: "Advanced knowledge of MS Office 365, including Excel, Access, PowerPoint, Word with VBA programming. In addition, proficiency in using Outlook and SharePoint. Familiar with designing and managing MS Teams channels."
+  summary: "Advanced knowledge of MS Office 365, including Excel, Access, PowerPoint, Word with VBA programming. Proficiency in using Outlook and SharePoint"
   #url: ""
   
-- name: VBA
-  logo: /images/sections/skills/vba.png
-  summary: "Experience in the automation of reporting and data presentation processes using VBA macros"
-  #url: ""
-
-- name: SAP, AWS, Netlify
+- name: SAP, AWS & Others
   logo: /images/sections/skills/sap.png
   summary: "Fundamental knowledge of SAP and AWS technologies, also Netlify with HUGO for a purpose of this webpage :) "
   #url: ""  
+  
+- name: Analytical thinking
+  logo: /images/sections/skills/analytical.png
+  summary: "Capacity to break down complex problems into smaller components and analyze data to identify patterns and trends"
+  
+- name: Problem-solving
+  logo: /images/sections/skills/problem.png
+  summary: "Skill in identifying problems, generating alternative solutions, and implementing effective strategies"
+  
+- name: Attention to detail
+  logo: /images/sections/skills/detail.png
+  summary: "Ability to thoroughly review and analyze data while maintaining accuracy and precision" 
+  
+- name: Critical thinking
+  logo: /images/sections/skills/
+  summary: "Capacity to objectively evaluate information, identify biases, and make logical and informed decisions" 
+  
+- name: Curiosity 
+  logo: /images/sections/skills/
+  summary: "Willingness to explore and learn new concepts, tools, and methodologies to enhance data analysis capabilities, as well as softskills" 
+  
+- name: Presentation skills 
+  logo:  /images/sections/skills/
+  summary: "Ability to deliver clear and engaging presentations to various audiences, highlighting key data findings and recommendations. Enthusiast of data storytelling" 
