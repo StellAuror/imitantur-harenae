@@ -9,37 +9,9 @@ section:
   # hideTitle: true 
 
 # Your experiences
-experiences:
-- company:
-    name: LEK SA (Novartis affiliate)
-    url: "http://lek-strykow.polandtrade.pl"
-    location: Remote
-    # company overview
-    overview: Sandoz (Novartis division) is a global leader in generic and biosimilar pharmaceuticals, committed to driving access to medicine
-  positions:
-  - designation: Intern
-    start: Jul 2022
-    # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
-    # give some points about what was your responsibilities at the company.
-    responsibilities:
-    - Design and develop process visualization tools for Process Owners  
-    - Database management and integrity assurance
-    - Project management
 
-- company:
-    name: Amazon Fulfillment Center
-    url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
-    location: Bielany Wrocławskie
-    overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers
-  positions:
-  - designation: Logistics worker
-    start: Jul 2021
-    end: Feb 2022
-    responsibilities:
-    - Manage the flow of consumer products and goods
-    - Storage of products in a warehouse
-    - ensuring customer satisfaction
+
+
 - company:
     name: Amazon Fulfillment Center
     url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
@@ -53,3 +25,37 @@ experiences:
     - Manage the flow of consumer products and goods
     - Storage of products in a warehouse
     - ensuring customer satisfaction
+    
+    
+- company:
+    name: Amazon Fulfillment Center
+    url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
+    location: Bielany Wrocławskie
+    overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers
+  positions:
+  - designation: Logistics worker
+    start: Jul 2021
+    end: Feb 2022
+    responsibilities:
+    - Manage the flow of consumer products and goods
+    - Storage of products in a warehouse
+    - ensuring customer satisfaction
+    
+    experiences:
+- company:
+    name: Novartis affiliate
+    url: "http://lek-strykow.polandtrade.pl"
+    location: Remote
+    # company overview
+    overview: 
+  positions:
+  - designation: Intern
+    start: Jul 2022
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Designing and developing visualization tools
+    - `As is` process mapping
+    - Database management and integrity assurance
+    - Reporting and supporting data driven decision making

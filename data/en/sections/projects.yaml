@@ -17,13 +17,20 @@ buttons:
 - name: Hobby
   filter: "Hobby"
 
-# your projects
+#  my projects
 projects:
 - name: Training Tracker
   logo: /images/sections/projects/gym.png
   role: Owner
-  timeline: "May 2020"
-  #repo: 
+  timeline: "May 2022"
   url: "https://mintdata.shinyapps.io/WebAppTest/"  
   summary: Training progress tracking app - basic statistics
   tags: ["Hobby", "Gym", "1st Attempt"]
+
+- name: Banrkupt - data preparation
+  logo: /images/sections/projects/bankrupt-part1-pl.png
+  role: Owner
+  timeline: "May 2023"
+  url: "https://rpubs.com/StellAuror/Bakrupt-part1-pl"
+  tags: ["Exploratory", "Prediction", "Markdown"]
+  
