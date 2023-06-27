@@ -1,6 +1,6 @@
 # section information
 section:
-  name: Experiences
+  name: Experience
   id: experiences
   enable: true
   weight: 3
@@ -12,9 +12,23 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: Wroclav University of Science and Technology
+    url: "https://www.pwr.net"
+    location: Wroclav
+    overview: Faculty of Management Engineneering, IT appliance in business
+  positions:
+  - designation: Student
+    start: Jun 2020
+    responsibilities:
+    - Shaping business and engineering competencies
+    - Shaping analytical competencies
+    - Shaping social competencies
+    - Shaping IT and technological competencies
+    
+- company:
     name: Amazon Fulfillment Center
     url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
-    location: Bielany Wrocławskie
+    location: Wroclav
     overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers
   positions:
   - designation: Logistics worker
@@ -25,11 +39,11 @@ experiences:
     - Storage of products in a warehouse
     - ensuring customer satisfaction
     
-    
+ 
 - company:
     name: Amazon Fulfillment Center
     url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
-    location: Bielany Wrocławskie
+    location: Wroclav
     overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers
   positions:
   - designation: Logistics worker
@@ -44,7 +58,7 @@ experiences:
 - company:
     name: Novartis affiliate
     url: "http://lek-strykow.polandtrade.pl"
-    location: Remote, Warszawa
+    location: Remote, Warsaw
     overview: Intern in an international supply chain management team in one of the largest pharmaceutical corporations in the world.
   positions:
   - designation: Intern
