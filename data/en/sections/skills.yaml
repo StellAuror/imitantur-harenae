@@ -38,7 +38,7 @@ skills:
 
 - name: HTML & CSS
   logo: /images/sections/skills/html.png
-  summary: "Working knowledge of HTML and CSS. Mostly used to customize the appearance of management tables and dashboards in R. But also to customize this page :)"
+  summary: "Working knowledge of HTML and CSS. Mostly used to customize the appearance of dashboards in R. But also to customize this page :)"
   #url: ""
   
 - name: Office365 with VBA
@@ -77,6 +77,6 @@ skills:
   
 - name: Time management
   logo:  /images/sections/skills/todo.png
-  summary: "Capacity to prioritize tasks, meet deadlines, and efficiently manage workloads. Quoting Pink Panther - 'To do, to do, too doo, too dooooo' enjoyer :)" 
+  summary: "Capacity to prioritize tasks, meet deadlines, and efficiently manage workloads." 
   
   

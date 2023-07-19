@@ -19,13 +19,37 @@ buttons:
 
 #  my projects
 projects:
-- name: Training tracker
+- name: Gym assistant
+  logo: /images/sections/projects/gym.png
+  role: Application
+  timeline: "May 2021"
+  url: "https://mintdata.shinyapps.io/WebAppTest/"  
+  summary: This app is a comprehensive tool designed to assist individuals in monitoring and evaluating their progress during various training activities. It provides users with a range of basic statistics that offer valuable insights into their performance, allowing them to make informed decisions and adjustments to optimize their training routine. 
+  tags: ["Hobby", "Gym", "1st Attempt", "App"]
+  
+- name: Airline passengers' satisfaction
   logo: /images/sections/projects/gym.png
   role: Application
   timeline: "May 2022"
-  url: "https://mintdata.shinyapps.io/WebAppTest/"  
-  summary: The Training Progress Tracking App is a comprehensive tool designed to assist individuals in monitoring and evaluating their progress during various training activities. It provides users with a range of basic statistics that offer valuable insights into their performance, allowing them to make informed decisions and adjustments to optimize their training routine. 
-  tags: ["Hobby", "Gym", "1st Attempt"]
+  url: "https://mintdata.shinyapps.io/airline/"  
+  summary: Simple descriptive analyze of passengers' satisfaction with a built-in prediction model.
+  tags: ["Academic", "Exploratory", "Prediction", "App"]
+  
+- name: Comparative analysis
+  logo: /images/sections/projects/gym.png
+  role: Application
+  timeline: "Dec 2022"
+  url: "https://mintdata.shinyapps.io/airline/"  
+  summary: The Comparative Analysis App is a simple and intuitive tool designed to leverage various comparative methods for analyzing tabular data
+  tags: ["Academic", "App", "Comparative"]
+  
+- name: Thirsty, a web-scrapping app
+  logo: /images/sections/projects/gym.png
+  role: Application
+  timeline: "Dec 2022"
+  url: "https://mintdata.shinyapps.io/airline/"  
+  summary: Are you thirsty? This app will help you to find the best drink (or coffee) to buy at fiveoclock.eu ;)
+  tags: ["Hobby", "App", "Web-scrapping"]
 
 - name: Bankruptcy prediction
   logo: /images/sections/projects/bankrupt-part1-pl.png
@@ -40,7 +64,7 @@ projects:
   role: Repository
   timeline: "March 2022 - today"
   url: "https://rpubs.com/StellAuror/Bakrupt-part1-pl"
-  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource for accessing well-organized and formatted notes and reports. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
+  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource of knowledge I collected. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
   tags: ["Academic", "Markdown", "Repository", "Hobby", "Professional"] 
   
 - name: Porfolio web page
