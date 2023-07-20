@@ -9,7 +9,6 @@ section:
   # hideTitle: true 
 
 # Your experiences
-# Your experiences
 experiences:
 - company:
     name: Wroclav University of Science and Technology
@@ -57,7 +56,7 @@ experiences:
     
 - company:
     name: Novartis affiliate
-    url: "http://lek-strykow.polandtrade.pl"
+    url: "https://www.novartis.com/pl-pl/"
     location: Remote, Warsaw
     overview: Intern in an international supply chain management team in one of the largest pharmaceutical corporations in the world.
   positions:
