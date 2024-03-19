@@ -10,63 +10,43 @@ section:
 
 # Your experiences
 experiences:
-- company:
-    name: Wroclav University of Science and Technology
-    url: "https://www.pwr.net"
-    location: Wroclav
-    overview: Faculty of Management Engineneering, IT appliance in business
-  positions:
-  - designation: Student
-    start: Jun 2020
-    responsibilities:
-    - Shaping business and engineering competencies
-    - Shaping analytical competencies
-    - Shaping social competencies
-    - Shaping IT and technological competencies
     
 - company:
     name: Amazon Fulfillment Center
     url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
     location: Wroclav
-    overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers
+    overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers.
   positions:
   - designation: Logistics worker
     start: Jul 2020
-    end: Jan 2021
-    responsibilities:
-    - Manage the flow of consumer products and goods
-    - Storage of products in a warehouse
-    - ensuring customer satisfaction
-    
- 
-- company:
-    name: Amazon Fulfillment Center
-    url: "https://www.amazon.jobs/pl/locations/wroclaw-poland"
-    location: Wroclav
-    overview: Fulfillment center is an Amazon warehouse where incoming orders are received, stored, packed and shipped out to customers
-  positions:
-  - designation: Logistics worker
-    start: Jul 2021
     end: Feb 2022
     responsibilities:
     - Manage the flow of consumer products and goods
     - Storage of products in a warehouse
     - ensuring customer satisfaction
     
+- company:
+    name: Wroclav University of Science and Technology
+    url: "https://www.pwr.net"
+    location: Wroclav
+    overview: Faculty of Management Engineering with a specialization in the Application of Information Technology in Business. The subject of the thesis revolved around the design and implementation of an R Shiny application within a business environment. Engineering thesis grade is 5.5, defended with a score of 5.0.
+  positions:
+  - designation: Engineer`s degree 
+    start: Jun 2020
+    end: Jan 2024
+    
     
 - company:
     name: Novartis affiliate
     url: "https://www.novartis.com/pl-pl/"
     location: Remote, Warsaw
-    overview: Intern in an international supply chain management team in one of the largest pharmaceutical corporations in the world.
+    overview: Intern in an international team in one of the largest pharmaceutical corporations in the world.
   positions:
-  - designation: Intern
+  - designation: Intern, Data Analyst 
     start: Jul 2022
-    # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
-    # give some points about what was your responsibilities at the company.
     responsibilities:
     - Designing and developing visualization tools
-    - As is process mapping
+    - Participation in the creation and management of KPIs
+    - Mapping processes on an international scale 
     - Database management and integrity assurance
     - Reporting and supporting data driven decision making

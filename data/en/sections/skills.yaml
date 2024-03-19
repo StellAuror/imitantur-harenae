@@ -24,9 +24,9 @@ skills:
   summary: "Intermediate knowledge of SQL queries, familiar with Access software, management of relational databases and data warehouses"
   #url: ""
   
-- name: Tableau & QlikSense
-  logo: /images/sections/skills/tableau.png
-  summary: "Adept at drag&drop data visualization tools. Mainly Tableau (Desktop) & QlikSense (SaaS), fundamental knowledge of PowerBI (Desktop)"
+- name: Power Bi & Tableau
+  logo: /images/sections/skills/pbi.png
+  summary: "Worked in drag&drop data visualization tools. Mainly PowerBI (Desktop), fundamental knowledge of Tableau (Desktop) & QlikSense (SaaS)"
   
 - name: RapidMiner & WEKA
   logo: /images/sections/skills/rapid.png
@@ -38,7 +38,7 @@ skills:
 
 - name: HTML & CSS
   logo: /images/sections/skills/html.png
-  summary: "Working knowledge of HTML and CSS. Mostly used to customize the appearance of dashboards in R. But also to customize this page :)"
+  summary: "Working knowledge of HTML (webscrapping) and CSS. Mostly used to customize the appearance of dashboards in R."
   #url: ""
   
 - name: Office365 with VBA
@@ -62,11 +62,7 @@ skills:
 - name: Attention to detail
   logo: /images/sections/skills/detail.png
   summary: "Ability to thoroughly review and analyze data while maintaining accuracy and precision" 
-  
-- name: Critical thinking
-  logo: /images/sections/skills/critical.png
-  summary: "Capacity to objectively evaluate information, identify biases, and make logical and informed decisions" 
-  
+
 - name: Curiosity 
   logo: /images/sections/skills/child.png
   summary: "Willingness to explore and learn new concepts, tools, and methodologies to enhance data analysis capabilities, as well as softskills" 
@@ -77,7 +73,7 @@ skills:
   
 - name: Time management
   logo:  /images/sections/skills/todo.png
-  summary: "Capacity to prioritize tasks, meet deadlines, and efficiently manage workloads." 
+  summary: "Capacity to prioritize tasks, meet deadlines, and efficiently manage workloads. Obsidian md enthusiast." 
   
   
   

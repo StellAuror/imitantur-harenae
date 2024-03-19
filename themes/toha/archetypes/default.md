@@ -1,6 +1,6 @@
 ---
 hero: /images/background/sunrise.jpg
 author:
-    name: Md. Emruz Hossain
+    name: Michał Krawczuk
     image: /images/profile-image.jpg
 ---

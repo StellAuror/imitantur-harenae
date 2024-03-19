@@ -7,12 +7,11 @@ section:
   showOnNavbar: true
   template: sections/about.html
 
-# your designation
+# your designation.
 designation: Data Analyst
 
 # a summary about you
-summary: 'In 2024, I will be honored to achieve the title of management engineer, culminating my academic journey with a thesis focused on developing a web application for real-time business data analysis using the R Shiny framework. While this accomplishment marks a significant step in my professional career, it`s only the beginning of my fascination with the world of data science.Beyond my academic pursuits, I have wholeheartedly embraced data science as a hobby. The power of data, coupled with advanced computational capabilities, intrigues me deeply as it enables us to uncover insights about the world that were previously unimaginable.Continuously driven by curiosity, I stay abreast of the latest advancements in artificial intelligence, appreciating its potential while also being mindful of the ethical and societal implications it poses.Beyond my professional aspirations, I am an avid enthusiast of philosophy, finding inspiration in the profound ideas of great thinkers from all corners of the globe. This passion for philosophical exploration naturally intertwines with my love for fiction. During my leisure time, I lose myself in the works of renowned authors like Dostoevsky, Ayn Rand, and Leo Tolstoy, relishing the intellectual and emotional journeys their novels offer.To balance my cerebral pursuits, I engage in physical adventures, particularly cycling expeditions through serene forests and fields. These excursions provide me with an opportunity to unwind, contemplate, and appreciate the beauty of nature.I savor the world of music and immerse myself in the realms of computer games during my leisure hours. These diverse interests not only bring me joy but also enrich my life by providing different perspectives and sources of inspiration.'
-
+summary: 'In Jan 2024, I have been honored to achieve the title of management engineer, culminating my academic journey with a thesis focused on developing a web application for real-time business data analysis using the R Shiny framework. Beyond my academic pursuits, I have wholeheartedly embraced data science as a hobby. The power of data, coupled with advanced computational capabilities, intrigues me deeply. Continuously driven by curiosity, I stay abreast of the latest advancements in artificial intelligence, appreciating its potential while also being mindful of the ethical and societal implications it poses. Apart from my professional aspirations, I am also passionate about literature, especially popular science and fiction. I thoroughly enjoy spending my free time actively, particularly during the summer season when I can embark on long cycling adventures.'
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
@@ -44,7 +43,7 @@ badges:
 - type: certification
   name: Engineer
   url: "https://wz.pwr.edu.pl"
-  badge: "https://upload.wikimedia.org/wikipedia/en/f/f4/Wroclaw_University_of_Technology_logo.jpg"
+  badge: "https://wrocbal.pl/wrocbal/uploads/729.png"
 
 - type: certification
 
@@ -76,7 +75,7 @@ badges:
   
 - type: soft-skill-indicator
   name: Office365
-  percentage: 80
+  percentage: 95
   color: "#52b69a"
 
 - type: soft-skill-indicator
