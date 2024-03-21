@@ -43,12 +43,12 @@ projects:
   summary: The Comparative Analysis App is a simple and intuitive tool designed to leverage various comparative methods for analyzing tabular data
   tags: ["Academic", "App", "Comparative"]
   
-- name: Thirsty, a web-scrapping app
+- name: Time40, a web-scraping app
   logo: /images/sections/projects/gym.png
   role: Application
   timeline: "Dec 2022"
   url: "https://mintdata.shinyapps.io/thirsty/"  
-  summary: Are you thirsty? This app will help you to find the best drink (or coffee) to buy at fiveoclock.eu ;)
+  summary: Are you thirsty? This app will help you to find the best tea (or coffee) to buy at fiveoclock.eu ;)
   tags: ["Hobby", "App", "Web-scrapping"]
 
 - name: Bankruptcy prediction
