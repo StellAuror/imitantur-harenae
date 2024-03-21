@@ -23,7 +23,7 @@ projects:
   logo: /images/sections/projects/gym.png
   role: Application
   timeline: "May 2021"
-  url: "https://mintdata.shinyapps.io/WebAppTest/"  
+  url: ""  
   summary: This app is a comprehensive tool designed to assist individuals in monitoring and evaluating their progress during various training activities. It provides users with a range of basic statistics that offer valuable insights into their performance, allowing them to make informed decisions and adjustments to optimize their training routine. 
   tags: ["Hobby", "Gym", "1st Attempt", "App"]
   
@@ -31,7 +31,7 @@ projects:
   logo: /images/sections/projects/gym.png
   role: Application
   timeline: "May 2022"
-  url: "https://mintdata.shinyapps.io/airline/"  
+  url: "https://github.com/StellAuror/airlane-passangers"  
   summary: Simple descriptive analyze of passengers' satisfaction with a built-in prediction model.
   tags: ["Academic", "Exploratory", "Prediction", "App"]
   
@@ -39,7 +39,7 @@ projects:
   logo: /images/sections/projects/gym.png
   role: Application
   timeline: "Dec 2022"
-  url: "https://mintdata.shinyapps.io/NIWD/"  
+  url: "https://github.com/StellAuror/choice-criteria"  
   summary: The Comparative Analysis App is a simple and intuitive tool designed to leverage various comparative methods for analyzing tabular data
   tags: ["Academic", "App", "Comparative"]
   
@@ -47,7 +47,7 @@ projects:
   logo: /images/sections/projects/gym.png
   role: Application
   timeline: "Dec 2022"
-  url: "https://mintdata.shinyapps.io/thirsty/"  
+  url: "https://github.com/StellAuror/time40"  
   summary: Are you thirsty? This app will help you to find the best tea (or coffee) to buy at fiveoclock.eu ;)
   tags: ["Hobby", "App", "Web-scrapping"]
 
