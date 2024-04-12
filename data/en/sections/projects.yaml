@@ -10,8 +10,8 @@ section:
 
 # filter buttonss
 buttons:
-- name: Professional
-  filter: "Professional"
+- name: Portfolio
+  filter: "Portfolio"
 - name: Academic
   filter: "Academic"
 - name: Hobby
@@ -49,7 +49,7 @@ projects:
   timeline: "Dec 2022"
   url: "https://github.com/StellAuror/time40"  
   summary: Are you thirsty? This app will help you to find the best tea (or coffee) to buy at fiveoclock.eu ;)
-  tags: ["Hobby", "App", "Web-scrapping"]
+  tags: ["Hobby", "App", "Web-scrapping", "Portfolio"]
 
 - name: Bankruptcy prediction
   logo: /images/sections/projects/bankrupt-part1-pl.png
@@ -65,7 +65,16 @@ projects:
   timeline: "March 2022 - today"
   url: "https://rpubs.com/StellAuror"
   summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource of knowledge I collected. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
-  tags: ["Markdown", "Repository", "Hobby"] 
+  tags: ["Markdown", "Repository", "Hobby", "Portfolio"] 
+  
+- name: Markdown repo
+  logo: /images/sections/projects/rrepo.png
+  role: Repository
+  timeline: "April 2024"
+  url: "https://rpubs.com/StellAuror/plene"
+  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource of knowledge I collected. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
+  tags: ["Markdown", "Repository", "Hobby", "Portfolio"] 
+  
   
 - name: Porfolio web page
   logo: /images/sections/projects/cv.png
@@ -73,4 +82,4 @@ projects:
   timeline: "December 2022 - today"
   url: "https://imitantur-herenae.netlify.app"
   summary: Welcome to my website! Here you will find information about me, my CV, and get to know my professional experience. I hope the information provided here gives you a comprehensive understanding of my background and professional journey. 
-  tags: ["Professional"] 
+  tags: ["Hobby", "Portfolio"] 
