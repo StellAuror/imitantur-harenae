@@ -72,15 +72,15 @@ projects:
   role: Repository
   timeline: "March 2022 - today"
   url: "https://rpubs.com/StellAuror"
-  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource of knowledge I collected. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
+  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource of knowledge I collected.
   tags: ["Markdown", "Repository", "Hobby", "Portfolio"] 
   
-- name: Markdown repo
+- name: Eurostat Data Analytics
   logo: /images/sections/projects/rrepo.png
   role: Repository
   timeline: "April 2024"
   url: "https://rpubs.com/StellAuror/plene"
-  summary: In this repository, you will find a collection of academic projects where Markdown has been utilized as the primary format for creating notes and reports. Whether you are a student, researcher, or simply interested in academic projects, this repository serves as a valuable resource of knowledge I collected. The Markdown format ensures that the content is accessible and readable across different platforms and devices.
+  summary: Simply exploring eurostat databases :) 
   tags: ["Markdown", "Repository", "Hobby", "Portfolio"] 
   
   
