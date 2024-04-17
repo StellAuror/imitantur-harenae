@@ -50,6 +50,14 @@ projects:
   url: "https://github.com/StellAuror/time40"  
   summary: Are you thirsty? This app will help you to find the best tea (or coffee) to buy at fiveoclock.eu ;)
   tags: ["Hobby", "App", "Web-scrapping", "Portfolio"]
+  
+- name: Lucent, a Change Tracking app
+  logo: /images/sections/projects/gym.png
+  role: Application
+  timeline: "Jul 2023"
+  url: "https://github.com/StellAuror/lucent"  
+  summary: Are you thirsty? This app will help you to find the best tea (or coffee) to buy at fiveoclock.eu ;)
+  tags: ["Proffessional", "App", "Portfolio", "Thesis"]
 
 - name: Bankruptcy prediction
   logo: /images/sections/projects/bankrupt-part1-pl.png
