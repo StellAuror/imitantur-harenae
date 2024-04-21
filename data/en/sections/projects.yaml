@@ -56,7 +56,7 @@ projects:
   role: Application
   timeline: "Jul 2023"
   url: "https://github.com/StellAuror/lucent"  
-  summary: Are you thirsty? This app will help you to find the best tea (or coffee) to buy at fiveoclock.eu ;)
+  summary: The result of engineering work, the essence of which is the design of an analytical application allowing for the acquisition, transformation and presentation of data for supply chain employees.
   tags: ["Proffessional", "App", "Portfolio", "Thesis"]
 
 - name: Bankruptcy prediction
